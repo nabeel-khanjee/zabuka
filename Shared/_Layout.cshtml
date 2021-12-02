@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Zabuka</title>
+    <link href="~/Assets/images/icon.jpg" rel="icon">
+    <link href="~/Assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/Assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/Assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- Magnific Popup -->
+    <link href="~/Assets/css/magnific-popup.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Fancybox -->
+    <link href="~/Assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <!-- Themify Icons -->
+    <link href="~/Assets/css/themify-icons.css" rel="stylesheet" />
+    <!-- Nice Select CSS -->
+    <link href="~/Assets/css/niceselect.css" rel="stylesheet" />
+    <!-- Animate CSS -->
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
+    <!-- Flex Slider CSS -->
+    <link href="~/Assets/css/flex-slider.min.css" rel="stylesheet" />
+    <!-- Owl Carousel -->
+    <link href="~/Assets/css/owl-carousel.css" rel="stylesheet" />
+    <!-- Slicknav -->
+    <link href="~/Assets/css/slicknav.min.css" rel="stylesheet" />
+    <!-- Vendor CSS Files -->
+    <link href="~/Assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="~/Assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/Assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Eshop StyleSheet -->
+    <link href="~/Assets/css/reset.css" rel="stylesheet" />
+    <link href="~/Assets/css/styleeshop.css" rel="stylesheet" />
+    <link href="~/Assets/css/responsive.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+    <!-- Template Main CSS File -->
+    <link href="/Assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <!--Created a Partial Navbar View-->
+        @Html.Partial("_Navbar")
+    </header>
+            
+    @RenderBody()
+
+<footer id="footer">
+    <!--Created a Partial Footer View-->
+    @Html.Partial("_Footer")
+</footer>
+    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="~/Assets/js/jquery-migrate-3.0.0.js"></script>
+    <script src="~/Assets/js/jquery-ui.min.js"></script>
+    <!-- Popper JS -->
+    <script src="~/Assets/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <!-- Color JS -->
+    <!-- Slicknav JS -->
+    <script src="~/Assets/js/slicknav.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="~/Assets/js/owl-carousel.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="~/Assets/js/magnific-popup.js"></script>
+    <!-- Waypoints JS -->
+    <script src="~/Assets/js/waypoints.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="~/Assets/js/finalcountdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="~/Assets/js/nicesellect.js"></script>
+    <!-- Flex Slider JS -->
+    <script src="~/Assets/js/flex-slider.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="~/Assets/js/scrollup.js"></script>
+    <!-- Onepage Nav JS -->
+    <script src="~/Assets/js/onepage-nav.min.js"></script>
+    <!-- Easing JS -->
+    <script src="~/Assets/js/easing.js"></script>
+    <!-- Active JS -->
+    <script src="~/Assets/js/active.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Assets/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="~/Assets/vendor/aos/aos.js"></script>
+    <script src="~/Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/Assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/Assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/Assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/Assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Assets/js/main.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

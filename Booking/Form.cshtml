@@ -1,0 +1,190 @@
+﻿<link href="~/Assets/css/BookingNav.css" rel="stylesheet" />
+@*<link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />*@
+@*<link href="~/Assets/css/datepicker.css" rel="stylesheet" />*@
+@*<link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />*@
+<link href="~/Assets/css/tooplate-style.css" rel="stylesheet" />
+<link href="~/Assets/css/font.css" rel="stylesheet" />
+@*<link href="~/Assets/css/carousal.css" rel="stylesheet" />*@
+<script src="~/Assets/js/bookingNavbar.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="navbar-container pt-4">
+    <ul>
+        <li class="nav-link ">
+            <i class="fa fa-bed" aria-hidden="true"></i>
+            <a href="#"> Stay</a>
+            <div class="underline"></div>
+        </li>
+        <li class="nav-link active-link">
+            <i class="fa fa-taxi" aria-hidden="true"></i>
+            <a href="#">Car rental</a>
+            <div class="underline"></div>
+        </li>
+    </ul>
+
+</div>
+<br />
+@* Multiple form *@
+<div class="container" >
+    <div class="row">
+        <div class="col-md-7 ">
+            <div class="card-body bg-light h-100 pb-5">
+                <h2>Booking Detail</h2>
+                <hr />
+                <form>
+
+                    <div class="form-check-inline ml-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="DefaultRadiobtn">
+                        <label class="form-check-label mr-2" for="DefaultRadiobtn">
+                            One-Way
+                        </label>
+                    </div>
+                    <div class="form-check-inline ml-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="DefaultRadiobtn2" checked>
+                        <label class="form-check-label" for="DefaultRadiobtn2">
+                            Return
+                        </label>
+                    </div>
+                    <br />
+
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="cars">Route-To:</label><br />
+                            <select>
+                                <option value="Cap">Cap-Haitin</option>
+                                <option value="Jacmel">Jacmel</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cars">From:</label><br />
+                            <select>
+                                <option value="Cap">Cap-Haitin</option>
+                                <option value="Jacmel">Jacmel</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="time"> Departure-Time:</label>
+                            <input type="datetime-local" class="form-control" id="time" name="time">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <label for="exampleFormControlInput1" class="form-label">Number Of Tickets:</label>
+                            <input type="number" class="form-control" id="" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="form-label">Total-Price:</label>
+                            <input type="number" class="form-control" id="">
+                        </div>
+                    </div>
+
+
+                    
+
+                    <hr />
+                    <div class="row">
+                        <h3>Passenger Detail </h3>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <br />
+
+
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <label for="time">Date Of Birth:</label>
+                            <input type="datetime-local" class="form-control" id="DateOfBirth" name="DateOfBirth">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label>Nationality:</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="form-label">Phone Number:</label>
+                            <input type="number" class="form-control" id="">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="">
+                        </div>
+                    </div>
+                    <br/>
+
+                    <button type="submit" style="float: right; margin-bottom:5px;" class="btn btn-primary">Complete Booking</button>
+                    <br/>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card-body bg-light">
+                <form>
+                    <h3>CheckOut</h3>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="exampleFormControlInput1" class="form-label">Card-Holder Name:</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="exampleFormControlInput1" class="form-label">Card-Number:</label>
+                            <input type="number" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="cars">Card-Type:</label><br />
+                            <select>
+                                <option value="Mastercard">Mastercard</option>
+                                <option value="Visa">Visa</option>
+                                <option value="unionPay">unionPay</option>
+                                <option value="american express">american express</option>
+                            </select>
+                        </div>
+                        <br />
+
+                       
+                            <div class="col-md-6 ">
+                                <label for="time">Expiry date:</label>
+                                <input type="date" class="form-control form-label" id="Arrivaltime" name="Arrivaltime">
+                            </div>
+                            <div class="text-lg-right font-weight-bold fs-5">
+                                <p>Sub-total:100$</p>
+                            </div>
+                            <button type="submit" style="float: right;" class="btn btn-primary">CheckOut</button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />
+

@@ -1,0 +1,344 @@
+﻿<link href="~/Assets/css/BookingNav.css" rel="stylesheet" />
+@*<link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />*@
+<link href="~/Assets/css/datepicker.css" rel="stylesheet" />
+@*<link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />*@
+<link href="~/Assets/css/tooplate-style.css" rel="stylesheet" />
+<link href="~/Assets/css/font.css" rel="stylesheet" />
+<link href="~/Assets/css/search.css" rel="stylesheet" />
+<script src="~/Assets/js/bookingNavbar.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+
+@{
+    ViewBag.Title = "Reservation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<style>
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+
+    body {
+        top: 0px !important;
+    }
+
+    .goog-logo-link {
+        display: none !important;
+    }
+
+    .trans-section {
+        margin: 50px;
+    }
+</style>
+<div class="navbar-container">
+    <ul>
+        <li class="nav-link active-link">
+            <i class="fa fa-bed" aria-hidden="true"></i>
+            <a href="#"> Stay</a>
+            <div class="underline"></div>
+        </li>
+        <li class="nav-link">
+            <i class="fa fa-taxi" aria-hidden="true"></i>
+            <a href="Booking/Carrental">Car rental</a>
+            <div class="underline"></div>
+        </li>
+    </ul>
+
+</div>
+
+<body>
+    <div class="trans-section ">
+        <div id="google_translate_element" style="display: none;"></div>
+        <select class="selectpicker" data-width="fit" onchange="translateLanguage(this.value);">
+            <option selected="selected" data-content='<span  <i class="fa fa-taxi" aria-hidden="true"></i></span>'>Language</option>
+            <option data-content='<span  <i class="flag-icon-au"></i></span> English' value="English">English</option>
+            <option data-content='<span class="flag-icon flag-icon-ht"></span> Haitian Creole' value="Haitian Creole">Haitian Creole</option>
+            <option data-content='<span class="flag-icon flag-icon-fr"></span> French' value="French">French</option>
+            <option data-content='<span class="flag-icon flag-icon-jp"></span> Japanese' value="Japanese">Japanese</option>
+            <option data-content='<span class="flag-icon flag-icon-jp"></span> Chinese' value="Chinese">Chinese</option>
+           
+            
+        </select>
+
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+        }
+
+        function translateLanguage(lang) {
+            googleTranslateElementInit();
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        }
+
+        $(function () {
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="card-body bg-light border col-md-3">
+                <h5>Filter By:</h5>
+                <hr />
+                <p style="color:black; font-weight:600; font-size:16px;">Your Budget:</p>
+                <br />
+                <label for="customRange1" class="form-label">Price range</label>
+                <input type="range" class="form-range" id="customRange1" />
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div><div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        PKR 0 – PKR 9,840 <span style="margin-left:6em;">23</span>
+                    </label>
+                </div>
+
+                <hr />
+                <p style="color:black; font-weight:600; font-size:16px;">Popular Filter</p><br />
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        No Prepayment <span style="margin-left: 8.5em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Book with out credit card <span style="margin-left: 4em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Breakfast Included <span style="margin-left: 7em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        4 Star <span style="margin-left: 13em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Free Cancellation <span style="margin-left: 7.5em;">23</span>
+                    </label>
+                </div>
+
+                <hr />
+                <p style="color:black; font-weight:600; font-size:16px;">Facilities</p>
+                <br />
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Parking <span style="margin-left:12em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Free wifi <span style="margin-left:11.5em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Family room <span style="margin-left:9.5em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        Non smoking rooms <span style="margin-left:5.9em;">23</span>
+                    </label>
+                </div>
+
+                <hr />
+                <p style="color:black; font-weight:600; font-size:16px;">Star Rating</p>
+                <br />
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        1 star <span style="margin-left:13em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        2 star <span style="margin-left:13em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        3 star <span style="margin-left:13em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        4 star <span style="margin-left:13em;">23</span>
+                    </label>
+                </div>
+                <div class="bx-checkbox-square checkbox-info checkbox-circle ">
+                    <input id="checkbox8" class="styled mr-1" type="checkbox" unchecked>
+                    <label for="checkbox8">
+                        5 star <span style="margin-left:13em;">23</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 ">
+                <div class="card-body bg-light h-100 pb-5">
+                    <h2>Enter your detail</h2>
+                    <hr />
+                    <form>
+                        <p>Are you traveling for work?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                yes
+                            </label>
+                        </div> <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                        <br />
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="">
+                            </div>
+
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">Confirm Email Address</label>
+                                <input type="email" class="form-control" id="" required>
+                            </div>
+                        </div><br />
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label for="birthdaytime">Arrival Time:</label>
+                                <input type="datetime-local" class="form-control" id="Arrivaltime" name="Arrivaltime">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="birthdaytime">Departure Time:</label>
+                                <input type="datetime-local" class="form-control" id="Departuretime" name="Departuretime">
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col-md-4">
+                                <div class="input-group ">
+                                    <span class="input-group">Enter your phone number:</span>
+                                    <input type="tel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <br />
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Special Request</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                        <h3>How do you want to pay? <span style="float:right; font-size:large; font-weight:500;">Total Amount: 100$</span></h3>
+                        </div>
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">Card-Holder Name:</label>
+                                <input type="text" class="form-control" id="">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="exampleFormControlInput1" class="form-label">Card Number:</label>
+                                <input type="number" class="form-control" id="">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="cars">Card-Type:</label><br />
+                                <select>
+                                    <option value="Mastercard">Mastercard</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="unionPay">unionPay</option>
+                                    <option value="american express">american express</option>
+                                </select>
+                            </div>
+                            <br />
+                            <div class="form-group ">
+                                <div class="col-md-4">
+                                    <label for="time">Expiry date:</label>
+                                    <input type="datetime-local" class="form-control" id="Arrivaltime" name="Arrivaltime">
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <button type="submit" style="float: right;" class="btn btn-primary">Complete Booking</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+
+<br />
